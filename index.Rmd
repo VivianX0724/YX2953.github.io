@@ -22,3 +22,6 @@ I have a very cute dog called "Caizhuyou":
 # Know More About Me
   Here is my academic and professional experience [Resume](About-me.html)
 
+# Solution to Problem 2
+  Here is my solution [P2 Solution](NY-NOAA.html)
+

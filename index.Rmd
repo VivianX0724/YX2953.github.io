@@ -1,10 +1,24 @@
 ---
-title: "HW4-YX2953"
+title: "Vivian Xia's Website"
 output: 
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
-# This is Vivian Xia's Website!
+# Welcome!
+<img src="image/My Photo.jpg" style="width:50%">
+  
+Hello! I’m Yuwei(Vivian) Xia, and this is my personal website. 
+
+I am currently a student in MS Data Science Program in Department of Environmental Health at Columbia University. 
+I like painting and dancing during my leisure time. I am also a "Gourmet". I often go out with friends for exploring delicious food when we are free.
+
+I have a very cute dog called "Caizhuyou":
+
+<img src="image/My Dog 1.jpg" style="width:30%">
+<img src="image/My Dog 2.jpg" style="width:30%">
+
+# Know More About Me
+  Here is my academic and professional experience [Resume](About-me.html)
+

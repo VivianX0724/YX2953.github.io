@@ -1,0 +1,14 @@
+name: "Yay internet!"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "About me"
+      href: About me.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<1197587275@qq.com>
+    - icon: fa-github fa-lg
+      href: http://github.com/VivianX0724/
+output:
+  html_document:
+    theme: cerulean

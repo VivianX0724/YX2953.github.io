@@ -1,0 +1,67 @@
+---
+title: "Know More About Me"
+output: 
+  html_document: 
+    toc: true
+    toc_float: true
+  
+---
+<style>
+h1 { color: #003f5c; } 
+h2 { color: #a05195; } 
+h3 { color: #d45087; } 
+</style>
+
+## Education Background
+
+### Xi’an Jiaotong – Liverpool University (XJTLU)	      2020.09-2024.07. 
+BSc Applied Mathematics.  
+Modules included:  
+Advanced Linear Algebra, Introduction to Probability and Statistics, Dynamic Modelling, Introduction to Programming in Java, Metric Spaces, Statistical Distribution Theory, Ordinary Differential Equations and Control, Complex Functions, Introduction to Operational Research, Partial Differential Equations, Numerical Analysis, Topology, Risk Management, Population Dynamics, Applied Probability, Final Year Project 
+
+### Columbia University in the City of New York	      2024.09-present. 
+MS Environmental Health Data Science. 	  
+Modules included:  
+Environmental Health Science, Data Science 1&2, Bio-statistical Method 1&2, Principle of Epidemiology, Principle of Toxicology, Environmental Determinants of Human Health, Public Health GIS, Journal Club in Molecular Epi and Toxicology, Advanced Analytic Methods in EHS, Computational Toxicology, Thesis( Master’s Essay)
+
+
+## Working Experience
+
+### Tigermed, MacroStat Clinical Research Co., Ltd., China	2023.06-2023.08. 
+Data Statistics Department, Intern.        
+1.Assisted department supervisor with daily business operations.   
+2.Used Xmind and PowerPoint to prepare business reports, daily summaries, and external industry sharing.    
+3.Used SAS and Python to assist seniors in programming and conduct medical data statistics and analysis, image modeling, report preparation, and other related tasks. 
+   
+### SEQENS, Novacyl(Wuxi) Pharmaceutical Co.Ltd.	2022.01-2022.04. 
+Quality Control Department, Intern.    	 
+1.Assisted with the quality and environment examination of paracetamol samples and organize the data.      
+2.Operated retrospective analysis of the validation data and conduct historical data statistics and analysis in microbiology compartment.     
+3.Analyzed the result data and report the situation of the quality of the samples.     
+
+## Research Experience
+
+### Case Study: Atmospheric Pollution and Health	2023.10-2024.2
+The research expects to detect the atmospheric pollutants and explore their spatiotemporal distribution characteristics, with the aim to provide theoretical support and basis for subsequent atmospheric environment management and protection.
+
+### Case Study: Network Dynamics	     2022.06-2023.06
+The research aimed to study the quantitative and qualitative description of the behavior of the nonlinear dynamical systems, identifying emergent patterns from a theoretical perspective, while also addressing practical problems from an applied perspective.     
+
+### Case Study: Distribution and Ecotoxicological Assessment of Bisphenols in Suzhou	     2022.06-2022.12
+The research explored the spatial and temporal distribution of bisphenol compounds (BPs) in Suzhou urban surface water, with the aim to provide recommendations for future water resource conservation and related watershed management. We chose Xietang River and Taihu Lake as the sampling pointing. I developed field experiment ability, strong analysis skills, as well as gained hands-on experience.  
+
+## Skills& Activities
+
+### Skills:
+Java, MATLAB, SAS, R, Python, LINGO, Microsoft Office.  
+
+### Contests: 
+Third Prize in 8th LANXESS “Clean Water for Better Life” University Students Research Competition.
+Silver Medal of Wuxi Sport Game. 
+
+### Awards: 
+
+National Endeavor Scholarship, Academic Achievement Scholarship, Outstanding Student Ambassador, XJTLU Appraisal Outstanding Student, Outstanding Class Cadre
+
+### Activities: 
+Member of the Student Executive Committee, Minister of Department of Public Information, Head of Publicity Department in Gourmet Society, Leader of the University Dance Team, The Monitor of Class 2043, Student Community Representative

@@ -1,0 +1,98 @@
+---
+title: "NYC Inspections Dashboard with Violation Categories"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(plotly)
+library(httr)
+library(jsonlite)
+
+# Function to fetch all inspection data
+get_all_inspections = function(url) {
+  
+  all_inspections = vector("list", length = 0)
+  
+  loop_index = 1
+  chunk_size = 50000
+  DO_NEXT = TRUE
+  
+  while (DO_NEXT) {
+    message("Getting data, page ", loop_index)
+    
+    all_inspections[[loop_index]] = 
+      GET(url,
+          query = list(`$order` = "zipcode",
+                       `$limit` = chunk_size,
+                       `$offset` = as.integer((loop_index - 1) * chunk_size)
+                       )
+          ) %>%
+      content("text") %>%
+      fromJSON() %>%
+      as_tibble()
+    
+    DO_NEXT = dim(all_inspections[[loop_index]])[1] == chunk_size
+    loop_index = loop_index + 1
+  }
+  
+  all_inspections
+  
+}
+
+url = "https://data.cityofnewyork.us/resource/43nn-pn8j.json"
+
+# Fetch and prepare the data
+nyc_inspections = 
+  get_all_inspections(url) %>%
+  bind_rows() %>%
+  mutate(
+    score = as.numeric(score),
+    violation_category = case_when(
+      str_detect(violation_description, "temperature") ~ "Public Health Hazard",
+      str_detect(violation_description, "wash") ~ "Critical Violation",
+      str_detect(violation_description, "sanitize") ~ "General Violation",
+      TRUE ~ "Other"
+    )
+  ) %>%
+  filter(!is.na(score))
+```
+
+```{r}
+# Create a bar plot of inspections by violation category
+inspections_by_category <- nyc_inspections %>%
+  count(violation_category)
+
+plot_ly(inspections_by_category, x = ~violation_category, y = ~n, type = 'bar') %>%
+  layout(title = "Inspections by Violation Category",
+         xaxis = list(title = "Violation Category"),
+         yaxis = list(title = "Number of Inspections"))
+```
+
+```{r}
+# Create a scatter plot of scores by violation category
+plot_ly(nyc_inspections, x = ~violation_category, y = ~score, type = 'scatter', mode = 'markers') %>%
+  layout(title = "Score Distribution by Violation Category",
+         xaxis = list(title = "Violation Category"),
+         yaxis = list(title = "Score"))
+```
+
+```{r}
+# Create a box plot for inspection scores by cuisine type and violation category
+top_cuisines <- nyc_inspections %>%
+  count(cuisine_description) %>%
+  top_n(10) %>%
+  pull(cuisine_description)
+
+box_plot <- nyc_inspections %>%
+  filter(cuisine_description %in% top_cuisines) %>%
+  plot_ly(x = ~cuisine_description, y = ~score, color = ~violation_category, type = "box") %>%
+  layout(title = "Inspection Scores by Cuisine Type and Violation Category",
+         xaxis = list(title = "Cuisine Type"),
+         yaxis = list(title = "Inspection Score"))
+```
+
